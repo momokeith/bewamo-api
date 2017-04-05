@@ -1,0 +1,23 @@
+{
+    "name": "kfina/bewamo",
+    "description": "The Bewamo project",
+    "type": "project",
+    "require-dev": {
+        "phpspec/phpspec": "^3.2",
+        "behat/behat": "^3.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kfina\\Bewamo\\": "src"
+        }
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "authors": [
+        {
+            "name": "Mohamed Keita",
+            "email": "mohamed.keita@worldfirst.com"
+        }
+    ]
+}

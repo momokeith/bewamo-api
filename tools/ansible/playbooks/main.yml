@@ -1,0 +1,5 @@
+---
+
+- include: install_roles.yml
+- include: provisioning.yml
+- include: deploy.yml
