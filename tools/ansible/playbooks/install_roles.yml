@@ -1,8 +1,0 @@
----
-
-- hosts: all
-
-  tasks:
-    - name: Install roles
-      local_action:
-        command ansible-galaxy install -f -v -r requirements.yml -p playbooks/roles
