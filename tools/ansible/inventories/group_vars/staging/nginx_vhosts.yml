@@ -1,7 +1,5 @@
 ---
 
-git_branch: develop
-
 vhosts:
   api.bewamo:
     server_names:

@@ -1,0 +1,5 @@
+---
+
+git_repo: https://github.com/momokeith/bewamo-api.git
+project_name: bewamo-api
+web_dir: /var/wwww

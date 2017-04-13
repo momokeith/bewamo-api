@@ -1,6 +1,6 @@
 tools/ansible/playbooks/roles
 tools/vagrant/.vagrant
 .idea
-
+*.retry
 /vendor/
 /bin/
