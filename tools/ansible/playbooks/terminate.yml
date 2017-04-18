@@ -4,7 +4,5 @@
   become: true
 
   tasks:
-    - debug: msg="restart services"
-      notify:
-        - restart nginx
-        - restart php7-fpm
+    - name: restart php7-fpm
+      service: name=php7.1-fpm enabled=yes state=restarted
