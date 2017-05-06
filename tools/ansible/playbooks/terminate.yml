@@ -1,8 +1,0 @@
----
-
-- hosts: all
-  become: true
-
-  tasks:
-    - name: restart php7-fpm
-      service: name=php7.1-fpm enabled=yes state=restarted

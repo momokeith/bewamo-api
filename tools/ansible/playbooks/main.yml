@@ -2,4 +2,3 @@
 
 - include: provisioning.yml
 - include: deploy.yml
-- include: terminate.yml
