@@ -1,7 +1,19 @@
 {
-    "name": "kfina/bewamo",
+    "name": "kfina/bewamo-api",
     "description": "The Bewamo project",
     "type": "project",
+
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com:/momokeith/bewamo"
+        }
+    ],
+
+    "require": {
+        "kfina/bewamo": "dev-develop"
+    },
+
     "require-dev": {
         "phpspec/phpspec": "^3.2",
         "behat/behat": "^3.3"
