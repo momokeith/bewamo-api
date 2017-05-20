@@ -2,9 +2,7 @@
 
 vhosts:
   api.bewamo:
+    type: php7
     server_names:
       - api.staging.bewamo.com
     root: "{{ web_dir }}/{{ project_name }}/current/public"
-    location:
-      php:
-        fastcgi_pass: unix:/var/run/php/php7.1-fpm.sock
