@@ -1,0 +1,4 @@
+---
+build:
+  ant:
+    chdir: "{{ web_dir }}/{{ project_name }}/current"

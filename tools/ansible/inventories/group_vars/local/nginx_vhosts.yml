@@ -4,7 +4,7 @@ vhosts:
   api.bewamo:
     server_names:
       - api.bewamo.local
-    root: /var/www/bewamo-api/current/public
+    root: "{{ web_dir }}/{{ project_name }}/current/public"
     location:
       php:
         fastcgi_pass: unix:/var/run/php/php7.1-fpm.sock

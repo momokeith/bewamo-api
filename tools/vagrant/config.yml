@@ -1,0 +1,9 @@
+---
+vm:
+  hostname: api.bewamo.local
+  network:
+    ip: 192.168.50.4
+  synced_folder: /var/www/bewamo-api/current
+  provider:
+    name: Bewamo-api
+    memory: 2048
