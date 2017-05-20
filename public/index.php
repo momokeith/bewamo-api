@@ -1,3 +1,3 @@
 <?php
 
-echo('Bewamo API');
+echo('Yes!');
