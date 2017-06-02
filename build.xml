@@ -4,7 +4,7 @@
 
     <target name="prepare"  description="Install dependencies">
         <exec executable="composer" taskname="composer install">
-            <arg value="install"/>
+            <arg value="update"/>
         </exec>
     </target>
 
