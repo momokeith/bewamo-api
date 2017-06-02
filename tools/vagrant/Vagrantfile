@@ -44,5 +44,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ansible.galaxy_role_file = "../ansible/requirements.yml"
       ansible.galaxy_roles_path = "../ansible/playbooks/roles"
     end
+
+    config.vm.provision "shell",  name: "chdir to project dir", inline: "echo 'cd #{conf['vm']['synced_folder']}' > /etc/profile.d/cd_into_project.sh"
+    config.vm.provision "shell",  name: "set up permissions", inline: "sudo chown -R www-data:www-data #{conf['vm']['synced_folder']}"
   end
 end

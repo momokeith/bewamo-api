@@ -2,7 +2,7 @@
 
 vhosts:
   api.bewamo:
-    type: php7
+    type: symfony
     server_names:
       - api.bewamo.local
-    root: "{{ web_dir }}/{{ project_name }}/current/public"
+    root: "{{ web_dir }}/{{ project_name }}/current/web"
