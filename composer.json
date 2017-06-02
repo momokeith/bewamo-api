@@ -78,6 +78,9 @@
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
+            "env-map": {
+                "database_host": "BEWAMO_DATABASE"
+            }
         },
         "branch-alias": null
     },
