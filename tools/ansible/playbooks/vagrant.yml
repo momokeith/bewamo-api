@@ -2,9 +2,3 @@
 
 - include: provisioning.yml
 - include: build.yml
-
-- hosts: all
-  become: true
-
-  tasks:
-    - kfina.roles/build/ant

@@ -20,7 +20,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.network "private_network", ip: conf['vm']['network']['ip']
 
-  config.vm.synced_folder "../..", conf['vm']['synced_folder']
+  config.vm.synced_folder "../..", conf['vm']['synced_folder']['guest_path'],
+   owner: conf['vm']['synced_folder']['owner'], group: conf['vm']['synced_folder']['group']
 
   config.vm.post_up_message = <<-EOF
     Your environment is now ready. \n
@@ -45,7 +46,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ansible.galaxy_roles_path = "../ansible/playbooks/roles"
     end
 
-    config.vm.provision "shell",  name: "chdir to project dir", inline: "echo 'cd #{conf['vm']['synced_folder']}' > /etc/profile.d/cd_into_project.sh"
-    config.vm.provision "shell",  name: "set up permissions", inline: "sudo chown -R www-data:www-data #{conf['vm']['synced_folder']}"
+    config.vm.provision "shell",  name: "chdir to project dir", inline: "echo 'cd #{conf['vm']['synced_folder']['guest_path']}' > /etc/profile.d/cd_into_project.sh"
   end
 end

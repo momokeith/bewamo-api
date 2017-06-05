@@ -5,3 +5,10 @@
 
   roles:
     - kfina.roles/deployment/web
+
+  tasks:
+    - name: Restart Nginx
+      service: name=nginx enabled=yes state=restarted
+
+    - name: Restart Php
+      service: name=php7.1-fpm enabled=yes state=restarted

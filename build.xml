@@ -3,8 +3,8 @@
             description="Performs static analysis, runs the tests, and generates project documentation"/>
 
     <target name="prepare"  description="Install dependencies">
-        <exec executable="composer" taskname="composer update">
-            <arg value="update"/>
+        <exec executable="composer" taskname="composer install">
+            <arg value="install"/>
             <arg value="-dev --no-ansi --no-interaction --optimize-autoloader"/>
         </exec>
     </target>

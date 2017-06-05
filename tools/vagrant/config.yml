@@ -3,7 +3,10 @@ vm:
   hostname: api.bewamo.local
   network:
     ip: 192.168.50.4
-  synced_folder: /var/www/bewamo-api/current
+  synced_folder:
+    guest_path: /var/www/bewamo-api/current
+    owner: www-data
+    group: www-data
   provider:
     name: Bewamo-api
     memory: 2048
