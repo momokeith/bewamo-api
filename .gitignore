@@ -19,3 +19,4 @@ tools/vagrant/.vagrant
 !var/SymfonyRequirements.php
 /vendor/
 /web/bundles/
+/php_errors.log

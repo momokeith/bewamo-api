@@ -1,9 +1,21 @@
-# Learn more about services, parameters and containers at
-# http://symfony.com/doc/current/service_container.html
-parameters:
-    #parameter_name: value
-
 services:
-    #service_name:
-    #    class: AppBundle\Directory\ClassName
-    #    arguments: ['@another_service_name', 'plain_value', '%parameter_name%']
+    app.shop_controller:
+      class: AppBundle\Controller\ShopController
+      arguments:
+        - '@kfina.bewamo.shop.service'
+
+    kfina.bewamo.shop.service:
+      class: Kfina\Bewamo\Shop\Service\ShopService
+      arguments:
+        - '@kfina.bewamo.shop.repository'
+
+    kfina.bewamo.shop.repository:
+      class: Kfina\Bewamo\Shop\Repository\DoctrineRepository
+      arguments:
+        - '@doctrine.orm.entity_manager'
+        - '@kfina.bewamo.shop.doctrine.orm.mapping.classmetadata'
+
+    kfina.bewamo.shop.doctrine.orm.mapping.classmetadata:
+      class: Doctrine\ORM\Mapping\ClassMetadata
+      arguments:
+        - 'Kfina\Bewamo\Shop\Entity\Shop'
