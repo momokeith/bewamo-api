@@ -4,7 +4,7 @@ PROJECT_DIR=$(pwd)
 ANSIBLE_DIR=$PROJECT_DIR/tools/ansible
 PLAYBOOKS_PATH=$ANSIBLE_DIR/playbooks
 INVENTORIES_PATH=$ANSIBLE_DIR/inventories
-ENV=${1:-local}
+ENV=${1:-staging}
 GIT_BRANCH=${2:-develop}
 
 ansible-galaxy install -f -v -r $ANSIBLE_DIR/requirements.yml -p $PLAYBOOKS_PATH/roles
