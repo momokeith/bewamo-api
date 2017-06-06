@@ -3,6 +3,7 @@ services:
       class: AppBundle\Controller\ShopController
       arguments:
         - '@kfina.bewamo.shop.service'
+        - '@serializer'
 
     kfina.bewamo.shop.service:
       class: Kfina\Bewamo\Shop\Service\ShopService
