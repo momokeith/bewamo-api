@@ -11,4 +11,3 @@
     - kfina.roles/ant
     - kfina.roles/nginx
     - kfina.roles/nginx-vhosts
-    - geerlingguy.mysql
