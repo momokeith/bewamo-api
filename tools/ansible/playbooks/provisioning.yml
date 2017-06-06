@@ -6,7 +6,9 @@
   roles:
     - kfina.roles/php7
     - kfina.roles/git
+    - kfina.roles/unzip
     - kfina.roles/composer
     - kfina.roles/ant
     - kfina.roles/nginx
     - kfina.roles/nginx-vhosts
+    - geerlingguy.mysql

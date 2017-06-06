@@ -1,6 +1,6 @@
 ---
 
-mysql_root_password: '~uD4C^3VGjnUR<gU'
+mysql_root_password: 'root-pwd'
 mysql_databases:
   - name: bewamo
     encoding: latin1
@@ -8,5 +8,5 @@ mysql_databases:
 mysql_users:
   - name: bewamo
     host: "%"
-    password: ']eC3t6aE/M;[g~`2'
+    password: 'bewamo'
     priv: "bewamo.*:ALL"
