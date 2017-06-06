@@ -1,0 +1,11 @@
+---
+
+- include: ../provisioning.yml
+
+- hosts: all
+  become: true
+
+  roles:
+    - geerlingguy.mysql
+
+- include: build.yml

@@ -4,6 +4,5 @@
   become: true
 
   roles:
-    - geerlingguy.mysql
     - kfina.roles/build-parameters
     - kfina.roles/build/ant
