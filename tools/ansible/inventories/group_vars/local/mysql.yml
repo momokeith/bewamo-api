@@ -1,0 +1,12 @@
+---
+
+mysql_root_password: '~uD4C^3VGjnUR<gU'
+mysql_databases:
+  - name: bewamo
+    encoding: latin1
+    collation: latin1_general_ci
+mysql_users:
+  - name: bewamo
+    host: "%"
+    password: ']eC3t6aE/M;[g~`2'
+    priv: "bewamo.*:ALL"

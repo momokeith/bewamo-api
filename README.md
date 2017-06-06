@@ -1,6 +1,14 @@
 # bewamo-api
 
+## Setting up the local environment
+````
+git clone https://github.com/momokeith/bewamo-api.git
+git checkout develop
+cd tools/vagrant
+vagrant up --provision
+````
+
 ## Deploying on staging
 ````
-ansible-playbook -i tools/ansible/inventories/staging tools/ansible/playbooks/deploy.yml
+tools/ansible/bin/deploy.sh
 ````

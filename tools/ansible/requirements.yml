@@ -2,3 +2,5 @@
 
 - src: git+https://github.com/momokeith/ansible-roles
   name: kfina.roles
+
+- src: geerlingguy.mysql
