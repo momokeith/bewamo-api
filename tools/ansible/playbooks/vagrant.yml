@@ -2,10 +2,3 @@
 
 - include: provisioning.yml
 - include: build.yml
-
-#- hosts: all
-#  become: true
-#
-#  tasks:
-#    - name: display facts
-#      debug: msg={{ ansible_env }}
