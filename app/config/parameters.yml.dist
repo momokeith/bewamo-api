@@ -2,13 +2,11 @@
 # Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
 # http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
 parameters:
-    database_host: 127.0.0.1
-    database_port: ~
-    database_name: symfony
-    database_user: root
-    database_password: ~
-    # You should uncomment this if you want to use pdo_sqlite
-    #database_path: '%kernel.root_dir%/../var/data/data.sqlite'
+    database_host: {{ ansible_env.BEWAMO_DATABASE_HOST }}
+    database_port: {{ ansible_env.BEWAMO_DATABASE_PORT }}
+    database_name: {{ ansible_env.BEWAMO_DATABASE_NAME }}
+    database_user: {{ ansible_env.BEWAMO_DATABASE_USER }}
+    database_password: {{ ansible_env.BEWAMO_DATABASE_PASSWORD }}
 
     mailer_transport: smtp
     mailer_host: 127.0.0.1

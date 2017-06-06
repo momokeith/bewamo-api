@@ -1,3 +1,7 @@
 ---
 
 git_branch: develop
+
+build_parameters:
+ files:
+    - {src: app/config/parameters.yml.dist, dest: app/config/parameters.yml }

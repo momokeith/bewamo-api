@@ -1,5 +1,5 @@
 <project name="bewamo" default="full-build">
-    <target name="full-build" depends="prepare,unit_tests"
+    <target name="full-build" depends="prepare,unit_tests,db_migration"
             description="Performs static analysis, runs the tests, and generates project documentation"/>
 
     <target name="prepare"  description="Install dependencies">
@@ -12,6 +12,12 @@
     <target name="unit_tests"  description="Run unit tests">
         <exec executable="bin/phpspec" taskname="Phpspec">
             <arg value="r"/>
+        </exec>
+    </target>
+
+    <target name="db_migration"  description="Migrate the database">
+        <exec executable="bin/console" taskname="Doctrine migration">
+            <arg value="doctrine:migrations:migrate"/>
         </exec>
     </target>
 </project>

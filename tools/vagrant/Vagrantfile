@@ -44,8 +44,13 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       ansible.limit = "local"
       ansible.galaxy_role_file = "../ansible/requirements.yml"
       ansible.galaxy_roles_path = "../ansible/playbooks/roles"
+      ansible.verbose = "vvvv"
     end
 
     config.vm.provision "shell",  name: "chdir to project dir", inline: "echo 'cd #{conf['vm']['synced_folder']['guest_path']}' > /etc/profile.d/cd_into_project.sh"
+    config.vm.provision "shell",  name: "Give write permissions to group www-data", inline: "sudo chmod -R g+w #{conf['vm']['synced_folder']['guest_path']}"
+    config.vm.provision "shell",  name: "add vagrant user to www-data group", inline: "sudo usermod -a -G www-data vagrant"
+    config.vm.provision "shell",  name: "Avoid root env resetting", inline: "echo 'Defaults        !env_reset' >> /etc/sudoers.d/vagrant"
+    config.vm.provision "shell", path: "set_up_databases_parameters.sh"
   end
 end

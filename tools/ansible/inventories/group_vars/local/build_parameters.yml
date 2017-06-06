@@ -1,0 +1,3 @@
+build_parameters:
+  files:
+    - {src: ../../../../../../app/config/parameters.yml.dist, dest: /var/www/bewamo-api/current/app/config/parameters.yml }
