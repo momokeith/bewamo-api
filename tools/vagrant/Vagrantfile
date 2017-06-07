@@ -22,7 +22,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.synced_folder "../..", conf['vm']['synced_folder']['guest_path'],
    owner: conf['vm']['synced_folder']['owner'], group: conf['vm']['synced_folder']['group'],
-   mount_options: ["dmode=775,fmode=664"]
+   mount_options: ["dmode=775,fmode=775"]
 
   config.vm.post_up_message = <<-EOF
     Your environment is now ready. \n
