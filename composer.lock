@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5035a9287445dc002565b7285bdb5c6b",
+    "content-hash": "f40eb2ad6bff428c189f5a63d8682836",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1103,7 +1103,7 @@
         },
         {
             "name": "kfina/bewamo",
-            "version": "dev-develop",
+            "version": "0.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com:/momokeith/bewamo",
@@ -1133,7 +1133,7 @@
                 }
             ],
             "description": "The Bewamo project",
-            "time": "2017-06-06 14:48:06"
+            "time": "2017-06-06T14:48:06+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -3543,9 +3543,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "kfina/bewamo": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
