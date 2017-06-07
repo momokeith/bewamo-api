@@ -5,7 +5,7 @@ vm:
     ip: 192.168.50.4
   synced_folder:
     guest_path: /var/www/bewamo-api/current
-    owner: www-data
+    owner: vagrant
     group: www-data
   provider:
     name: Bewamo-api

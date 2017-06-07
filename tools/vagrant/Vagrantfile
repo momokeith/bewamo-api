@@ -21,7 +21,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.network "private_network", ip: conf['vm']['network']['ip']
 
   config.vm.synced_folder "../..", conf['vm']['synced_folder']['guest_path'],
-   owner: conf['vm']['synced_folder']['owner'], group: conf['vm']['synced_folder']['group']
+   owner: conf['vm']['synced_folder']['owner'], group: conf['vm']['synced_folder']['group'],
+   mount_options: ["dmode=775,fmode=664"]
 
   config.vm.post_up_message = <<-EOF
     Your environment is now ready. \n
@@ -48,9 +49,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     end
 
     config.vm.provision "shell",  name: "chdir to project dir", inline: "echo 'cd #{conf['vm']['synced_folder']['guest_path']}' > /etc/profile.d/cd_into_project.sh"
-    config.vm.provision "shell",  name: "Give write permissions to group www-data", inline: "sudo chmod -R g+w #{conf['vm']['synced_folder']['guest_path']}"
-    config.vm.provision "shell",  name: "add vagrant user to www-data group", inline: "sudo usermod -a -G www-data vagrant"
-    config.vm.provision "shell",  name: "Avoid root env variables being resetted", inline: "echo 'Defaults        !env_reset' >> /etc/sudoers.d/vagrant"
-    config.vm.provision "shell", path: "set_up_databases_parameters.sh"
+    config.vm.provision "shell", path: "configure.sh"
   end
 end
