@@ -95,3 +95,5 @@ nelmio_cors:
             allow_methods: ['POST', 'PUT', 'GET', 'DELETE']
             max_age: 3600
             hosts: []
+
+nelmio_api_doc: ~

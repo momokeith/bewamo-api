@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Serializer;
+use Nelmio\ApiDocBundle\Annotation\ApiDoc;
 
 /**
  * @Route(service="app.shop_controller")
@@ -38,6 +39,11 @@ class ShopController extends Controller
 
     /**
      * @Route(path="/shops/list")
+     * @ApiDoc(
+     *     resource=true,
+     *     resourceDescription="Operations on shops.",
+     *     description="Retrieve list of shops."
+     * )
      */
     public function listAction()
     {
